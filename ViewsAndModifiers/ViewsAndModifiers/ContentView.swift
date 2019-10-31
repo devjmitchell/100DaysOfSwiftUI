@@ -8,9 +8,28 @@
 
 import SwiftUI
 
+struct CustomModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
+            .foregroundColor(.blue)
+    }
+}
+
+extension View {
+    func customStyle() -> some View {
+        self.modifier(CustomModifier())
+    }
+}
+
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        VStack {
+            Text("Not using extension")
+                .modifier(CustomModifier())
+            Text("Using extension")
+                .customStyle()
+        }
     }
 }
 
