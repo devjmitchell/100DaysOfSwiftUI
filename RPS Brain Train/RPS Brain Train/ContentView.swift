@@ -8,10 +8,14 @@
 
 import SwiftUI
 
+private enum Choice: String, CaseIterable {
+    case rock = "✊"
+    case paper = "✋"
+    case scissors = "✌️"
+}
+
 struct ContentView: View {
-    #warning("use enum instead?")
-    private let choices = ["✊", "✋", "✌️"]
-    @State private var computerChoice = Int.random(in: 0...2)
+    @State private var computerChoice = Choice.allCases.randomElement()!
     @State private var shouldWin = Bool.random()
     
     @State private var correctAnswerCount = 0
@@ -19,62 +23,86 @@ struct ContentView: View {
     
     @State private var showingAlert = false
     @State private var alertTitle = ""
-//    @State private var alertMessage = ""
+    @State private var alertMessage = ""
     
     var body: some View {
-        VStack {
-            Text("Score: \(correctAnswerCount) / \(totalAnswerCount)")
-            Text(choices[computerChoice])
-            Text("Try to \(shouldWin ? "WIN" : "LOSE")")
-            
-            HStack {
-                ForEach(0 ..< choices.count) { number in
-                    Button(action: {
-                        self.guess(number)
-                    }) {
-                        Text(self.choices[number])
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [.blue, .black]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
+            VStack(spacing: 50) {
+                Text("Score: \(correctAnswerCount) / \(totalAnswerCount)")
+                
+                Text(computerChoice.rawValue)
+                    .font(.system(size: 150))
+                
+                Text("Try to \(shouldWin ? "WIN" : "LOSE")")
+                
+                HStack(spacing: 20) {
+                    ForEach(0..<Choice.allCases.count) { number in
+                        Button(action: {
+                            self.guess(Choice.allCases[number])
+                        }) {
+                            Text(Choice.allCases[number].rawValue)
+                        }
                     }
-                    
                 }
+                .font(.system(size: 80))
             }
-            
-            Spacer()
-        }
-        .font(.largeTitle)
-        .alert(isPresented: $showingAlert) {
-            Alert(title: Text(alertTitle), dismissButton: .default(Text("Continue")) {
-                self.nextTry()
-            })
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            .font(.system(size: 50))
+            .foregroundColor(.white)
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Continue")) {
+                    self.showNextQuestion()
+                    })
+            }
         }
     }
     
-    func guess(_ number: Int) {
+    private func guess(_ choice: Choice) {
         totalAnswerCount += 1
         
-        let correctNumber: Int
+        let correctChoice: Choice
         
         switch computerChoice {
-        case 0:
-            correctNumber = shouldWin ? 1 : 2
-        case 1:
-            correctNumber = shouldWin ? 2 : 0
-        default:
-            correctNumber = shouldWin ? 0 : 1
+        case .rock:
+            correctChoice = shouldWin ? .paper : .scissors
+        case .paper:
+            correctChoice = shouldWin ? .scissors : .rock
+        case .scissors:
+            correctChoice = shouldWin ? .rock : .paper
         }
         
-        if number == correctNumber {
+        if choice == correctChoice {
             correctAnswerCount += 1
             alertTitle = "Right!"
+            alertMessage = "Great job!"
         } else {
             alertTitle = "Wrong!"
+            alertMessage = "The correct answer was \(correctChoice.rawValue)"
         }
         
-        showingAlert = true
+//        showingAlert = true
+        showNextQuestion()
     }
     
-    func nextTry() {
-        computerChoice = Int.random(in: 0...2)
-        shouldWin = Bool.random()
+    private func showNextQuestion() {
+        if totalAnswerCount < 10 {
+            computerChoice = Choice.allCases.randomElement()!
+            shouldWin = Bool.random()
+        } else {
+            startNewGame()
+        }
+    }
+    
+    private func startNewGame() {
+        alertTitle = "Game Over"
+        alertMessage = "You got \(correctAnswerCount) right out of 10"
+        
+        totalAnswerCount = 0
+        correctAnswerCount = 0
+        
+        showingAlert = true
     }
 }
 
