@@ -18,8 +18,9 @@ struct ContentView: View {
     @State private var computerChoice = Choice.allCases.randomElement()!
     @State private var shouldWin = Bool.random()
     
-    @State private var correctAnswerCount = 0
-    @State private var totalAnswerCount = 0
+    @State private var score = 0
+    @State private var rightAnswerCount = 0
+    @State private var wrongAnswerCount = 0
     
     @State private var showingAlert = false
     @State private var alertTitle = ""
@@ -29,8 +30,13 @@ struct ContentView: View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [.blue, .black]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
+            
             VStack(spacing: 50) {
-                Text("Score: \(correctAnswerCount) / \(totalAnswerCount)")
+                HStack(spacing: 20) {
+                    Text("Score:")
+                    Text("\(score)")
+                        .foregroundColor(score > 0 ? .green : .red)
+                }
                 
                 Text(computerChoice.rawValue)
                     .font(.system(size: 150))
@@ -52,7 +58,8 @@ struct ContentView: View {
             .font(.system(size: 50))
             .foregroundColor(.white)
             .alert(isPresented: $showingAlert) {
-                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Continue")) {
+                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("New Game")) {
+                    self.clearScore()
                     self.showNextQuestion()
                     })
             }
@@ -60,8 +67,6 @@ struct ContentView: View {
     }
     
     private func guess(_ choice: Choice) {
-        totalAnswerCount += 1
-        
         let correctChoice: Choice
         
         switch computerChoice {
@@ -74,35 +79,32 @@ struct ContentView: View {
         }
         
         if choice == correctChoice {
-            correctAnswerCount += 1
-            alertTitle = "Right!"
-            alertMessage = "Great job!"
+            score += 1
+            rightAnswerCount += 1
         } else {
-            alertTitle = "Wrong!"
-            alertMessage = "The correct answer was \(correctChoice.rawValue)"
+            score -= 1
+            wrongAnswerCount += 1
         }
         
-//        showingAlert = true
         showNextQuestion()
     }
     
     private func showNextQuestion() {
-        if totalAnswerCount < 10 {
+        if (rightAnswerCount + wrongAnswerCount) < 10 {
             computerChoice = Choice.allCases.randomElement()!
             shouldWin = Bool.random()
         } else {
-            startNewGame()
+            alertTitle = "Final Score: \(score)"
+            alertMessage = "You got\n\(rightAnswerCount) right 😁\n\(wrongAnswerCount) wrong 😢"
+            
+            showingAlert = true
         }
     }
     
-    private func startNewGame() {
-        alertTitle = "Game Over"
-        alertMessage = "You got \(correctAnswerCount) right out of 10"
-        
-        totalAnswerCount = 0
-        correctAnswerCount = 0
-        
-        showingAlert = true
+    private func clearScore() {
+        score = 0
+        rightAnswerCount = 0
+        wrongAnswerCount = 0
     }
 }
 
