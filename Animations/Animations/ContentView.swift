@@ -9,8 +9,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var animationAmount: CGFloat = 1
+    
     var body: some View {
-        Text("Hello, World!")
+        Button("Tap Me") {
+            self.animationAmount += 1
+        }
+        .padding(50)
+        .background(Color.red)
+        .foregroundColor(.white)
+        .clipShape(Circle())
+        .scaleEffect(animationAmount)
+        .blur(radius: (animationAmount - 1) * 3)
+//        .animation(.default)
+//        .animation(.interpolatingSpring(stiffness: 50, damping: 1))
+//        .animation(.easeInOut(duration: 2))
+        .animation(
+            Animation.easeInOut(duration: 1)
+//                .delay(1)
+//                .repeatCount(3, autoreverses: true)
+                .repeatForever(autoreverses: true)
+        )
     }
 }
 
