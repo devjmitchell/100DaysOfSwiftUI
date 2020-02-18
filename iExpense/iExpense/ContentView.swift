@@ -48,17 +48,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            Text(item.type)
-                        }
-                        
-                        Spacer()
-                        Text("$\(item.amount)")
-                            .foregroundColor(self.textColor(for: item.amount))
-                    }
+                    CustomCell(item: item)
                 }
                 .onDelete(perform: removeItems)
             }
@@ -78,6 +68,25 @@ struct ContentView: View {
     
     func removeItems(at offsets: IndexSet) {
         expenses.items.remove(atOffsets: offsets)
+    }
+}
+
+struct CustomCell: View {
+    var item: ExpenseItem
+
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Text(item.name)
+                    .font(.headline)
+                Text(item.type)
+            }
+            
+            Spacer()
+            
+            Text("$\(item.amount)")
+                .foregroundColor(self.textColor(for: item.amount))
+        }
     }
     
     func textColor(for amount: Int) -> Color {
