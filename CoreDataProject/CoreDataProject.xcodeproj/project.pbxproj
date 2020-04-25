@@ -14,6 +14,8 @@
 		D353379824548E84006F486D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D353379724548E84006F486D /* Assets.xcassets */; };
 		D353379B24548E84006F486D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D353379A24548E84006F486D /* Preview Assets.xcassets */; };
 		D353379E24548E84006F486D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D353379C24548E84006F486D /* LaunchScreen.storyboard */; };
+		D35337A7245490E8006F486D /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35337A5245490E8006F486D /* Movie+CoreDataClass.swift */; };
+		D35337A8245490E8006F486D /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35337A6245490E8006F486D /* Movie+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D353379A24548E84006F486D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D353379D24548E84006F486D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D353379F24548E84006F486D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D35337A5245490E8006F486D /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D35337A6245490E8006F486D /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		D353378D24548E83006F486D /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				D35337A5245490E8006F486D /* Movie+CoreDataClass.swift */,
+				D35337A6245490E8006F486D /* Movie+CoreDataProperties.swift */,
 				D353378E24548E83006F486D /* AppDelegate.swift */,
 				D353379024548E83006F486D /* SceneDelegate.swift */,
 				D353379524548E83006F486D /* ContentView.swift */,
@@ -152,6 +158,8 @@
 				D353378F24548E83006F486D /* AppDelegate.swift in Sources */,
 				D353379124548E83006F486D /* SceneDelegate.swift in Sources */,
 				D353379624548E83006F486D /* ContentView.swift in Sources */,
+				D35337A7245490E8006F486D /* Movie+CoreDataClass.swift in Sources */,
+				D35337A8245490E8006F486D /* Movie+CoreDataProperties.swift in Sources */,
 				D353379424548E83006F486D /* CoreDataProject.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
