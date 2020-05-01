@@ -1,5 +1,5 @@
 //
-//  Singer+CoreDataClass.swift
+//  Candy+CoreDataClass.swift
 //  CoreDataProject
 //
 //  Created by Jason Mitchell on 5/1/20.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(Singer)
-public class Singer: NSManagedObject {
+@objc(Candy)
+public class Candy: NSManagedObject {
 
 }
