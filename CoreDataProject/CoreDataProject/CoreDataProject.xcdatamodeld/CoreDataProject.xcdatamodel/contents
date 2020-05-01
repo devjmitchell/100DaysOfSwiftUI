@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Wizard" representedClassName="Wizard" syncable="YES" codeGenerationType="class">
+    <entity name="Ship" representedClassName="Ship" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="universe" optional="YES" attributeType="String"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="name"/>
@@ -9,6 +10,6 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Wizard" positionX="-54" positionY="-9" width="128" height="58"/>
+        <element name="Ship" positionX="-54" positionY="-9" width="128" height="73"/>
     </elements>
 </model>
