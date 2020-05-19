@@ -13,6 +13,7 @@
 		D3CE021F2474424E00D3001A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3CE021E2474424E00D3001A /* Assets.xcassets */; };
 		D3CE02222474424E00D3001A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3CE02212474424E00D3001A /* Preview Assets.xcassets */; };
 		D3CE02252474424E00D3001A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3CE02232474424E00D3001A /* LaunchScreen.storyboard */; };
+		D3CE022D2474443200D3001A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE022C2474443200D3001A /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D3CE02212474424E00D3001A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D3CE02242474424E00D3001A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3CE02262474424E00D3001A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3CE022C2474443200D3001A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				D3CE02182474424C00D3001A /* AppDelegate.swift */,
 				D3CE021A2474424C00D3001A /* SceneDelegate.swift */,
 				D3CE021C2474424C00D3001A /* ContentView.swift */,
+				D3CE022C2474443200D3001A /* ImagePicker.swift */,
 				D3CE021E2474424E00D3001A /* Assets.xcassets */,
 				D3CE02232474424E00D3001A /* LaunchScreen.storyboard */,
 				D3CE02262474424E00D3001A /* Info.plist */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3CE02192474424C00D3001A /* AppDelegate.swift in Sources */,
+				D3CE022D2474443200D3001A /* ImagePicker.swift in Sources */,
 				D3CE021B2474424C00D3001A /* SceneDelegate.swift in Sources */,
 				D3CE021D2474424C00D3001A /* ContentView.swift in Sources */,
 			);
