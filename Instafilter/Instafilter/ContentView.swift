@@ -9,8 +9,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var image: Image?
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            image?
+                .resizable()
+                .scaledToFit()
+        }
+        .onAppear(perform: loadImage)
+    }
+    
+    func loadImage() {
+        image = Image("Example")
     }
 }
 
