@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D31DDC2724895FE200A8A30D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31DDC2624895FE200A8A30D /* MapView.swift */; };
 		D345D15424881A1E0070BDEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D345D15324881A1E0070BDEF /* AppDelegate.swift */; };
 		D345D15624881A1E0070BDEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D345D15524881A1E0070BDEF /* SceneDelegate.swift */; };
 		D345D15824881A1E0070BDEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D345D15724881A1E0070BDEF /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D31DDC2624895FE200A8A30D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		D345D15024881A1D0070BDEF /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D345D15324881A1E0070BDEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D345D15524881A1E0070BDEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				D345D15324881A1E0070BDEF /* AppDelegate.swift */,
 				D345D15524881A1E0070BDEF /* SceneDelegate.swift */,
 				D345D15724881A1E0070BDEF /* ContentView.swift */,
+				D31DDC2624895FE200A8A30D /* MapView.swift */,
 				D345D15924881A200070BDEF /* Assets.xcassets */,
 				D345D15E24881A200070BDEF /* LaunchScreen.storyboard */,
 				D345D16124881A200070BDEF /* Info.plist */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D345D15424881A1E0070BDEF /* AppDelegate.swift in Sources */,
+				D31DDC2724895FE200A8A30D /* MapView.swift in Sources */,
 				D345D15624881A1E0070BDEF /* SceneDelegate.swift in Sources */,
 				D345D15824881A1E0070BDEF /* ContentView.swift in Sources */,
 			);
