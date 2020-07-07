@@ -26,19 +26,40 @@ struct ProspectsView: View {
             return "Uncontacted people"
         }
     }
+    
+    var filteredProspects: [Prospect] {
+        switch filter {
+        case .none:
+            return prospects.people
+        case .contacted:
+            return prospects.people.filter { $0.isContacted }
+        case .uncontacted:
+            return prospects.people.filter { !$0.isContacted }
+        }
+    }
+    
     var body: some View {
         NavigationView {
-            Text("People: \(prospects.people.count)")
-                .navigationBarTitle(title)
-                .navigationBarItems(trailing: Button(action: {
-                    let prospect = Prospect()
-                    prospect.name = "Paul Hudson"
-                    prospect.emailAddress = "paul@hackingwithswift.com"
-                    self.prospects.people.append(prospect)
-                }) {
-                    Image(systemName: "qrcode.viewfinder")
-                    Text("Scan")
-                })
+            List {
+                ForEach(filteredProspects) { prospect in
+                    VStack(alignment: .leading) {
+                        Text(prospect.name)
+                            .font(.headline)
+                        Text(prospect.emailAddress)
+                            .foregroundColor(.secondary)
+                    }
+                }
+            }
+            .navigationBarTitle(title)
+            .navigationBarItems(trailing: Button(action: {
+                let prospect = Prospect()
+                prospect.name = "Paul Hudson"
+                prospect.emailAddress = "paul@hackingwithswift.com"
+                self.prospects.people.append(prospect)
+            }) {
+                Image(systemName: "qrcode.viewfinder")
+                Text("Scan")
+            })
         }
     }
 }
