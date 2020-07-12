@@ -13,6 +13,8 @@
 		D3664F6924BB7B15008A9F8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3664F6824BB7B15008A9F8D /* Assets.xcassets */; };
 		D3664F6C24BB7B15008A9F8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3664F6B24BB7B15008A9F8D /* Preview Assets.xcassets */; };
 		D3664F6F24BB7B15008A9F8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3664F6D24BB7B15008A9F8D /* LaunchScreen.storyboard */; };
+		D3664F7724BB8DB2008A9F8D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3664F7624BB8DB2008A9F8D /* Card.swift */; };
+		D3664F7924BB8DC7008A9F8D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3664F7824BB8DC7008A9F8D /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D3664F6B24BB7B15008A9F8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D3664F6E24BB7B15008A9F8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3664F7024BB7B15008A9F8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3664F7624BB8DB2008A9F8D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		D3664F7824BB8DC7008A9F8D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				D3664F6224BB7B14008A9F8D /* AppDelegate.swift */,
 				D3664F6424BB7B14008A9F8D /* SceneDelegate.swift */,
 				D3664F6624BB7B14008A9F8D /* ContentView.swift */,
+				D3664F7624BB8DB2008A9F8D /* Card.swift */,
+				D3664F7824BB8DC7008A9F8D /* CardView.swift */,
 				D3664F6824BB7B15008A9F8D /* Assets.xcassets */,
 				D3664F6D24BB7B15008A9F8D /* LaunchScreen.storyboard */,
 				D3664F7024BB7B15008A9F8D /* Info.plist */,
@@ -149,6 +155,8 @@
 				D3664F6324BB7B14008A9F8D /* AppDelegate.swift in Sources */,
 				D3664F6524BB7B14008A9F8D /* SceneDelegate.swift in Sources */,
 				D3664F6724BB7B14008A9F8D /* ContentView.swift in Sources */,
+				D3664F7724BB8DB2008A9F8D /* Card.swift in Sources */,
+				D3664F7924BB8DC7008A9F8D /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
