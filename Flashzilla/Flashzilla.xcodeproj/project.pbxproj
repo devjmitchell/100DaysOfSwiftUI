@@ -15,6 +15,7 @@
 		D3664F6F24BB7B15008A9F8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3664F6D24BB7B15008A9F8D /* LaunchScreen.storyboard */; };
 		D3664F7724BB8DB2008A9F8D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3664F7624BB8DB2008A9F8D /* Card.swift */; };
 		D3664F7924BB8DC7008A9F8D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3664F7824BB8DC7008A9F8D /* CardView.swift */; };
+		D3664F7B24BBA889008A9F8D /* EditCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3664F7A24BBA889008A9F8D /* EditCards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D3664F7024BB7B15008A9F8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3664F7624BB8DB2008A9F8D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		D3664F7824BB8DC7008A9F8D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D3664F7A24BBA889008A9F8D /* EditCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				D3664F6624BB7B14008A9F8D /* ContentView.swift */,
 				D3664F7624BB8DB2008A9F8D /* Card.swift */,
 				D3664F7824BB8DC7008A9F8D /* CardView.swift */,
+				D3664F7A24BBA889008A9F8D /* EditCards.swift */,
 				D3664F6824BB7B15008A9F8D /* Assets.xcassets */,
 				D3664F6D24BB7B15008A9F8D /* LaunchScreen.storyboard */,
 				D3664F7024BB7B15008A9F8D /* Info.plist */,
@@ -155,6 +158,7 @@
 				D3664F6324BB7B14008A9F8D /* AppDelegate.swift in Sources */,
 				D3664F6524BB7B14008A9F8D /* SceneDelegate.swift in Sources */,
 				D3664F6724BB7B14008A9F8D /* ContentView.swift in Sources */,
+				D3664F7B24BBA889008A9F8D /* EditCards.swift in Sources */,
 				D3664F7724BB8DB2008A9F8D /* Card.swift in Sources */,
 				D3664F7924BB8DC7008A9F8D /* CardView.swift in Sources */,
 			);
