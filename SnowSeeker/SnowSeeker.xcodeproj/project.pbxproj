@@ -13,6 +13,9 @@
 		D3C1E3F924BBBDFA00127D7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C1E3F824BBBDFA00127D7D /* Assets.xcassets */; };
 		D3C1E3FC24BBBDFA00127D7D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C1E3FB24BBBDFA00127D7D /* Preview Assets.xcassets */; };
 		D3C1E3FF24BBBDFA00127D7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C1E3FD24BBBDFA00127D7D /* LaunchScreen.storyboard */; };
+		D3C1E40724BBCCDF00127D7D /* Resort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C1E40624BBCCDF00127D7D /* Resort.swift */; };
+		D3C1E40924BBCD2300127D7D /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = D3C1E40824BBCD2300127D7D /* resorts.json */; };
+		D3C1E40B24BBCDF400127D7D /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C1E40A24BBCDF400127D7D /* Bundle-Decodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		D3C1E3FB24BBBDFA00127D7D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D3C1E3FE24BBBDFA00127D7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3C1E40024BBBDFA00127D7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3C1E40624BBCCDF00127D7D /* Resort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resort.swift; sourceTree = "<group>"; };
+		D3C1E40824BBCD2300127D7D /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
+		D3C1E40A24BBCDF400127D7D /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				D3C1E3F224BBBDF900127D7D /* AppDelegate.swift */,
 				D3C1E3F424BBBDF900127D7D /* SceneDelegate.swift */,
 				D3C1E3F624BBBDF900127D7D /* ContentView.swift */,
+				D3C1E40624BBCCDF00127D7D /* Resort.swift */,
+				D3C1E40A24BBCDF400127D7D /* Bundle-Decodable.swift */,
+				D3C1E40824BBCD2300127D7D /* resorts.json */,
 				D3C1E3F824BBBDFA00127D7D /* Assets.xcassets */,
 				D3C1E3FD24BBBDFA00127D7D /* LaunchScreen.storyboard */,
 				D3C1E40024BBBDFA00127D7D /* Info.plist */,
@@ -135,6 +144,7 @@
 			files = (
 				D3C1E3FF24BBBDFA00127D7D /* LaunchScreen.storyboard in Resources */,
 				D3C1E3FC24BBBDFA00127D7D /* Preview Assets.xcassets in Resources */,
+				D3C1E40924BBCD2300127D7D /* resorts.json in Resources */,
 				D3C1E3F924BBBDFA00127D7D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +158,8 @@
 			files = (
 				D3C1E3F324BBBDF900127D7D /* AppDelegate.swift in Sources */,
 				D3C1E3F524BBBDF900127D7D /* SceneDelegate.swift in Sources */,
+				D3C1E40B24BBCDF400127D7D /* Bundle-Decodable.swift in Sources */,
+				D3C1E40724BBCCDF00127D7D /* Resort.swift in Sources */,
 				D3C1E3F724BBBDF900127D7D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
