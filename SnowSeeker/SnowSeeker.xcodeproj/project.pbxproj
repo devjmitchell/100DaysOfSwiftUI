@@ -21,6 +21,7 @@
 		D3C1E41124BBD15400127D7D /* SkiDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C1E41024BBD15400127D7D /* SkiDetailsView.swift */; };
 		D3C1E41324BBD1A300127D7D /* ResortDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C1E41224BBD1A300127D7D /* ResortDetailsView.swift */; };
 		D3C1E41524BBD4F200127D7D /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C1E41424BBD4F200127D7D /* Facility.swift */; };
+		D3C1E41724BBD76900127D7D /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C1E41624BBD76900127D7D /* Favorites.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D3C1E41024BBD15400127D7D /* SkiDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiDetailsView.swift; sourceTree = "<group>"; };
 		D3C1E41224BBD1A300127D7D /* ResortDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortDetailsView.swift; sourceTree = "<group>"; };
 		D3C1E41424BBD4F200127D7D /* Facility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
+		D3C1E41624BBD76900127D7D /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				D3C1E41224BBD1A300127D7D /* ResortDetailsView.swift */,
 				D3C1E41024BBD15400127D7D /* SkiDetailsView.swift */,
 				D3C1E41424BBD4F200127D7D /* Facility.swift */,
+				D3C1E41624BBD76900127D7D /* Favorites.swift */,
 				D3C1E40C24BBCF3900127D7D /* WelcomeView.swift */,
 				D3C1E40624BBCCDF00127D7D /* Resort.swift */,
 				D3C1E40A24BBCDF400127D7D /* Bundle-Decodable.swift */,
@@ -176,6 +179,7 @@
 				D3C1E41524BBD4F200127D7D /* Facility.swift in Sources */,
 				D3C1E3F524BBBDF900127D7D /* SceneDelegate.swift in Sources */,
 				D3C1E40F24BBD09A00127D7D /* ResortView.swift in Sources */,
+				D3C1E41724BBD76900127D7D /* Favorites.swift in Sources */,
 				D3C1E40B24BBCDF400127D7D /* Bundle-Decodable.swift in Sources */,
 				D3C1E40724BBCCDF00127D7D /* Resort.swift in Sources */,
 				D3C1E41324BBD1A300127D7D /* ResortDetailsView.swift in Sources */,
