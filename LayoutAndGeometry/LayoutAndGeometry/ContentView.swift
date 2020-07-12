@@ -8,47 +8,34 @@
 
 import SwiftUI
 
-//struct ContentView: View {
-//    var body: some View {
-////        Text("Live long and prosper")
-////            .frame(width: 300, height: 300, alignment: .topLeading)
-//        HStack(alignment: .lastTextBaseline) {
-//            Text("Live")
-//                .font(.caption)
-//            Text("long")
-//            Text("and")
-//                .font(.title)
-//            Text("prosper")
-//                .font(.largeTitle)
-//        }
-//    }
-//}
-
-//struct ContentView: View {
-//    var body: some View {
-//        VStack(alignment: .leading) {
-//            Text("Hello, world!")
-////                .alignmentGuide(.leading) { d in d[.leading] }
-//                .alignmentGuide(.leading) { d in d[.trailing] }
-//            Text("This is a longer line of text")
-//        }
-//        .background(Color.red)
-//        .frame(width: 400, height: 400)
-//        .background(Color.blue)
-//    }
-//}
+extension VerticalAlignment {
+    enum MidAccountAndName: AlignmentID {
+        static func defaultValue(in d: ViewDimensions) -> CGFloat {
+            d[.top]
+        }
+    }
+    
+    static let midAccountAndName = VerticalAlignment(MidAccountAndName.self)
+}
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            ForEach(0..<10) { position in
-                Text("Number \(position)")
-                    .alignmentGuide(.leading) { _ in CGFloat(position) * -10 }
+        HStack(alignment: .midAccountAndName) {
+            VStack {
+                Text("My baybay")
+                    .alignmentGuide(.midAccountAndName) { d in d[VerticalAlignment.center] }
+                Image("example")
+                    .resizable()
+                    .frame(width: 64, height: 64)
+            }
+            
+            VStack {
+                Text("Full name:")
+                Text("MY BABY")
+                    .alignmentGuide(.midAccountAndName) { d in d[VerticalAlignment.center] }
+                    .font(.largeTitle)
             }
         }
-        .background(Color.red)
-        .frame(width: 400, height: 400)
-        .background(Color.blue)
     }
 }
 
